@@ -42,14 +42,12 @@ typedef struct instruction_s
 extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
 
-/*file operations*/
 void OpenFile(char *file_name);
 void ReadFile(FILE *);
 int ParseLine(char *buffer, int line_number, int format);
 int LenChars(FILE *);
 void FindFunc(char *, char *, int, int);
 
-/*Stack operations*/
 stack_t *create_node(int n);
 void free_nodes(void);
 void PrintStack(stack_t **, unsigned int);
@@ -63,19 +61,17 @@ void PopTop(stack_t **, unsigned int);
 void Nop(stack_t **, unsigned int);
 void SwapNodes(stack_t **, unsigned int);
 
-/*Math operations with nodes*/
 void AddNodes(stack_t **, unsigned int);
 void SubNodes(stack_t **, unsigned int);
 void DivNodes(stack_t **, unsigned int);
 void MulNodes(stack_t **, unsigned int);
 void ModNodes(stack_t **, unsigned int);
 
-/*String operations*/
 void PrintChar(stack_t **, unsigned int);
 void PrintStr(stack_t **, unsigned int);
 void RotateBottom(stack_t **, unsigned int);
 void RotateTop(stack_t **, unsigned int);
-/*Error hanlding*/
+
 void Error(int error_number, ...);
 void ErrorTwo(int error_number, ...);
 void StringError(int error_number, ...);

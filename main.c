@@ -1,5 +1,4 @@
 #include "monty.h"
-stack_t *head = NULL;
 
 /**
  * main - entry point
@@ -19,7 +18,7 @@ int main(int argc, char *argv[])
 	free_nodes();
 	return (0);
 }
-
+stack_t *head = NULL;
 /**
  * create_node - Creates a node.
  * @n: Number to go inside the node.
